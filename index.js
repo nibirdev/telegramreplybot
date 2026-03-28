@@ -38,6 +38,10 @@ app.post("/webhook", async(req, res) => {
     res.sendStatus(200);
 });
 
+app.get("/", (req, res) => {
+    res.send("Bot is running ...");
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
